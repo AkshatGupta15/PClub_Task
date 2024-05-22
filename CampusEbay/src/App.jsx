@@ -1,25 +1,37 @@
 import { useEffect, useState } from "react";
 import "../src/output.css";
 import "./App.css";
+import { lazy,Suspense } from "react";
 
-import Features from "./Components/Features/Features";
-import { Product_Page } from "./Components/Products/Product_Page";
+// import { Product_Page } from "./Components/Products/Product_Page";
 import { BrowserRouter, Navigate, Route, Router, Routes } from "react-router-dom";
 import { Layout } from "./Layout";
-import { Home } from "./Home";
-import { Product_Details } from "./Components/Products/Product_Details";
+// import { Home } from "./Home";
+const Home = lazy(()=> import("./Home")) 
+const Product_Details = lazy(()=> import("./Components/Products/Product_Details")) 
+const Profile = lazy(()=> import("./Components/Profile/Profile")) 
+const Cart = lazy(()=> import("./Components/Cart/Cart")) 
+const Signup = lazy(()=> import("./Pages/login")) 
+const Checkout = lazy(()=> import("./Components/Checkout/Checkout")) 
+const Product_Page = lazy(()=> import("./Components/Products/Product_Page")) 
+const Login = lazy(()=> import("./Pages/login")) 
+const Dashboard = lazy(()=> import("./Components/Dashboard/Dashboard")) 
+const AddProduct = lazy(()=> import("./Components/AddProduct/AddProduct")) 
+
+// import { Product_Details } from "./Components/Products/Product_Details";
 import AllProducts from "./Data/Data";
-import Profile from "./Components/Profile/Profile";
-import { Cart } from "./Components/Cart/Cart";
-import { Checkout } from "./Components/Checkout/Checkout";
+// import Profile from "./Components/Profile/Profile";
+// import { Cart } from "./Components/Cart/Cart";
+// import { Checkout } from "./Components/Checkout/Checkout";
 import { Search } from "./Components/Search.jsx/Search";
 import MyState from "./context/myState";
-import { Login } from "./Pages/login";
-import { Signup } from "./Pages/signup";
+// import { Login } from "./Pages/login";
+// import { Signup } from "./Pages/signup";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { AddProduct } from "./Components/AddProduct/AddProduct";
-import { Dashboard } from "./Components/Dashboard/Dashboard";
+// import { AddProduct } from "./Components/AddProduct/AddProduct";
+// import { Dashboard } from "./Components/Dashboard/Dashboard";
+import { LoaderPage } from "./Components/Loader/Loader";
 function App() {
   const [cartItem, setCartItmes] = useState(
     JSON.parse(localStorage.getItem("cart")) || []
@@ -64,6 +76,7 @@ function App() {
     <>
       <MyState>
         <BrowserRouter>
+        <Suspense fallback={<LoaderPage/>}/>
           <Routes>
             <Route
               path="/"
