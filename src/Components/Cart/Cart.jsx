@@ -4,7 +4,7 @@ import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
 import { GroupedCart,CountButton, TotalPrice,RemoveItem } from "../utils_func/utils";
 import { Empty_cart } from "./Empty_cart";
-export const Cart = ({cartItem, setCartItmes}) => {
+const Cart = ({cartItem, setCartItmes}) => {
 
 
   return (
@@ -108,3 +108,5 @@ export const CartItem = ({selectedItem, TotalPrice,cartItem,setCartItmes}) => {
     </>
   );
 };
+
+export  default Cart;

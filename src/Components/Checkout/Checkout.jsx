@@ -1,30 +1,6 @@
 import React from "react";
 
-const item = {
-    info: {
-      id: 4,
-      title: "Voltas 36 L Room/Personal Air Cooler",
-      img: [
-        "https://rukminim2.flixcart.com/image/612/612/xif0q/air-cooler/9/e/i/-original-imagzsqhhgqpcw9h.jpeg?q=70",
-      ],
-      company: "Voltas",
-      category: "Cooler",
-      prevprice: 6099,
-      newprice: 1299,
-      color: "white",
-      reviews: 234,
-      stars: 4,
-      Keyfeatures: [
-        "Newest technology",
-        "Best in class components",
-        "Dimensions -69.5 x 75.0 x 169.0",
-        "Maintenance free",
-        "12 years warranty",
-      ],
-    },
-    count: 1,
-  };
-export const Checkout = () => {
+const Checkout = () => {
   return (
     <>
       <div className="mt-20 w-[90%] mx-auto">
@@ -87,7 +63,7 @@ export const Checkout = () => {
     </>
   );
 };
-
+export default Checkout
 
 export const CountryDropDown = () => {
   return (

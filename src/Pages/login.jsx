@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import MyContext from '../context/myContext';
 
-export const Login = () => {
+const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     
@@ -36,3 +36,5 @@ export const Login = () => {
     </div>
   )
 }
+
+export default Login

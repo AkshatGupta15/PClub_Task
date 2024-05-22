@@ -1,7 +1,7 @@
 import React from 'react'
 import Product_Card from './Product_Card'
 
-export const Product_Page = ({filteredItems}) => {
+const Product_Page = ({filteredItems}) => {
       // console.log(filteredItems)
   return (
     <>
@@ -28,3 +28,4 @@ export const Product_Page = ({filteredItems}) => {
     </>
   )
 }
+export default Product_Page;

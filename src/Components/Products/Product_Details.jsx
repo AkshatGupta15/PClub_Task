@@ -9,28 +9,7 @@ import More_Products from "./More_Products/More_Products";
 import { useContext } from "react";
 import MyContext from "../../context/myContext";
 
-
-//   id : 1,
-//   title: "Hindware 45 L Room/Personal Air Cooler",
-//   img: [
-//     "https://rukminim2.flixcart.com/image/612/612/xif0q/air-cooler/z/u/i/-original-imahyaf6gqgxwkbd.jpeg?q=70",
-//   ],
-//   company: "Hindware",
-//   category: "Cooler",
-//   prevprice: 13990,
-//   newprice: 1999,
-//   color: "white",
-//   reviews: 120,
-//   stars: 3,
-//   Keyfeatures: [
-//     "Newest technology",
-//     "Best in class components",
-//     "Dimensions -69.5 x 75.0 x 169.0",
-//     "Maintenance free",
-//     "12 years warranty",
-//   ],
-// };
-export const Product_Details = ({handleAddToCart, AllProducts,filterByCategory}) => {
+const Product_Details = ({handleAddToCart, AllProducts,filterByCategory}) => {
   const context = useContext(MyContext)  
   console.log(context)
    
@@ -188,3 +167,5 @@ export const Product_Details = ({handleAddToCart, AllProducts,filterByCategory})
     </>
   );
 };
+
+export default Product_Details;

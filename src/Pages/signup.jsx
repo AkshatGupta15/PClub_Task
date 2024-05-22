@@ -6,7 +6,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { Timestamp, addDoc, collection } from 'firebase/firestore';
 import { LoaderPage } from '../Components/Loader/Loader';
 
-export const Signup = () => {
+const Signup = () => {
     const [username, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -74,3 +74,5 @@ export const Signup = () => {
     </div>
   )
 }
+
+export default Signup

@@ -3,7 +3,6 @@ import Navbar from "./Components/Navbar/Navbar";
 
 import Footer from "./Components/Footer/Footer";
 import { Outlet } from 'react-router-dom';
-import { Product_Details } from './Components/Products/Product_Details';
 export const Layout = ({inputQuery , handleInputChange,handleInputSummit,cartItem,setCartItmes}) => {
   // console.log(inputQuery,handleInputChange )
   return (
