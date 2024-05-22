@@ -40,6 +40,19 @@
   font-weight: 500;
   /* font-style: italic; */
 }
+.lora-700 {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  /* font-style: italic; */
+}
+
+.lora-600 {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  /* font-style: italic; */
+}
 
 
 /* .rubik-<uniquifier> {

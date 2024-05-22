@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import "../src/output.css";
 import "./App.css";
-import { lazy,Suspense } from "react";
 import AllProducts from "./Data/Data";
 import { BrowserRouter, Navigate, Route, Router, Routes } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";

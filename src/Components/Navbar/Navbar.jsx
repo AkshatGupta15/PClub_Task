@@ -3,6 +3,7 @@ import { DropDown_Sidebar_profile } from "../Profile/DropDown_Sidebar_profile";
 import { Cart_Sidebar } from "../Cart/Sidebar_cart";
 import { useNavigate } from "react-router-dom";
 import logo from "../../assets/images/logo.png"
+import SearchSharpIcon from '@mui/icons-material/SearchSharp';
 const Navbar = ({ inputQuery, handleInputChange, handleInputSummit,cartItem,setCartItmes }) => {
     const navigate = useNavigate()
     const handleSummit =()=>{
@@ -12,70 +13,29 @@ const Navbar = ({ inputQuery, handleInputChange, handleInputSummit,cartItem,setC
   return (
     <>
       <div className="bg-slate-50">
-        <div className="navbar max-w-screen-2xl mx-auto">
-          <div className="navbar-start">
-            {/* <div className="dropdown">
-              <div
-                tabIndex={0}
-                role="button"
-                className="btn btn-ghost lg:hidden"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h8m-8 6h16"
-                  />
-                </svg>
-              </div>
-              <ul
-                tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-              >
-                <li>
-                  <a href="/store">Store</a>
-                </li>
-                <li>
-                  <a>Parent</a>
-                  <ul className="p-2">
-                    <li>
-                      <a>Submenu 1</a>
-                    </li>
-                    <li>
-                      <a>Submenu 2</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a>Item 3</a>
-                </li>
-              </ul>
-            </div> */}
-            <a href="/" className=" border rounded-full overflow-hidden mx-2 w-12">
-              <img src={logo} className="w-12"/>
-            </a>
+        <div className="navbar max-w-screen-2xl mx-auto ">
+          <div className="navbar-start w-full">
             
-          </div>
-          <div className="navbar-center">
-          <div className="form-control border w-full">
-             <form>
+       
+            <a href="/" className=" mx-2  ">
+              <span className="text-2xl lora-600 italic font-bold bg-gradient-to-r from-amber-500 to-pink-500 inline-block text-transparent bg-clip-text">Campus<span>Ebay</span></span>
+            </a>
+    
+            <div className="form-control   w-full">
+             <form className=" flex justify-end">
              <input
                 type="text"
                 placeholder="Search"
-                className="input input-bordered max-w-lg"
+                className="input input-bordered input-md w-full max-w-xs"
                 onChange={handleInputChange}
                 onSubmit={handleInputSummit}
                 value={inputQuery}
               />
              </form>
             </div>
+          </div>
+          <div className="navbar-center">
+          
             
           </div>
           {/* <div className="navbar-end">
@@ -103,7 +63,9 @@ const Navbar = ({ inputQuery, handleInputChange, handleInputSummit,cartItem,setC
                 <a>Item 3</a>
               </li>
             </ul>
-            
+            <div className="lg:hidden">
+            <SearchSharpIcon/>
+            </div>
             <div className="">
               <Cart_Sidebar cartItem={cartItem} setCartItmes={setCartItmes} />
             </div>

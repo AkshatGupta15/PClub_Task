@@ -1,5 +1,5 @@
 import React from 'react'
-// import Loader from "react-js-loader";
+
 import { RotatingLines } from "react-loader-spinner";
 export const LoaderPage = () => {
   return (
@@ -8,7 +8,7 @@ export const LoaderPage = () => {
         <div className='absolute top-0 right-0 bottom-0 left-0 m-auto h-screen z-50 bg-indigo-300 bg-opacity-10 flex items-center justify-center'>
         {/* <span className="loading loading-dots loading-lg "></span> */}
         <div >
-                    {/* <Loader type="bubble-top"  title={"bubble-top"} size={100} /> */}
+
                     <RotatingLines
       strokeColor="grey"
       strokeWidth="5"

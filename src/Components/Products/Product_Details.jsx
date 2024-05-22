@@ -12,16 +12,16 @@ import MyContext from "../../context/myContext";
 const Product_Details = ({handleAddToCart, AllProducts,filterByCategory}) => {
   const context = useContext(MyContext)  
   console.log(context)
-   
+
   const [counterCart, setCounterCart] = useState(1)
   const [selectedProduct, setSelectedProduct] = useState({})
-  const {category,id} = useParams()
+  const {id} = useParams()
   // const selectedProduct1 = AllProducts.filter((product) => id == product.id);
   useEffect(()=>{
     const product = AllProducts.find(product => product.id == id);
     setSelectedProduct(product || {});
 
-  },[])
+  },[id])
   // console.log(selectedProduct)
   // console.log(params)
   const [isAdded, setIsAdded] = useState(false);
