@@ -17,8 +17,8 @@ const Navbar = ({ inputQuery, handleInputChange, handleInputSummit,cartItem,setC
           <div className="navbar-start w-full">
             
        
-            <a href="/" className=" mx-2  ">
-              <span className="text-2xl lora-600 italic font-bold bg-gradient-to-r from-amber-500 to-pink-500 inline-block text-transparent bg-clip-text">Campus<span>Ebay</span></span>
+            <a href="/" className="mx-2">
+              <span className="lg:text-2xl text-lg lora-600 italic font-bold bg-gradient-to-r from-amber-500 to-pink-500 inline-block text-transparent bg-clip-text">Campus<span>Ebay</span></span>
             </a>
     
             <div className="form-control   w-full">
