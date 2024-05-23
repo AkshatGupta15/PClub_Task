@@ -14,16 +14,20 @@ const Product_Card = ({ more_info }) => {
   // const history = useHistory();
   return (
     <>
-      <div className="shadow-none card lg:max-w-64 max-w-64 bg-base-100 rounded-none px-2 hover:opacity-60 cursor-pointer overflow-hidden">
-        <figure className="border ">
+      <div 
+      onClick={()=>{
+        gotToNewPage()
+      }}
+      className=" shadow-none card lg:max-w-64 max-w-68  bg-base-100 rounded-none px-2 hover:opacity-60 cursor-pointer overflow-hidden">
+        <figure className=" ">
           <img
             className="hover:object-cover hover:scale-105 object-scale-down md:h-64 h-52 transition ease-in-out duration-300"
             src={more_info.img[0]}
             alt={more_info.category}
           /> 
         </figure>
-        <div className="lg:pt-3 card-body lg:h-44 border p-3">
-          <div className="border ">
+        <div className="lg:pt-3 card-body lg:h-44  p-3">
+          <div className=" ">
             {/* <Rating name="read-only" value={more_info.stars} readOnly style={{fontSize: isMobile ? '16px' : '24px',}}/> */}
             <div className="rating lg:rating-sm rating-xs">
   <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400"  disabled/>

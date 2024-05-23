@@ -10,9 +10,6 @@ import { useNavigate } from "react-router-dom";
 import { Sidebar_toggle_button } from "../Usefull_Components/sidebar_toggle_button";
 export const DropDown_Sidebar_profile = () => {
   const navigate = useNavigate();
-  const gotToNewPage = () => {
-    navigate("/profile");
-  };
   const links = [
     {
       text: "Your Porfile",
@@ -22,12 +19,7 @@ export const DropDown_Sidebar_profile = () => {
     {
       text: "Orders",
       icon: Inventory2OutlinedIcon,
-      path: "#",
-    },
-    {
-      text: "Change Delivery Address",
-      icon: AddLocationAltOutlinedIcon,
-      path: "#",
+      path: "/order",
     },
     {
       text: "Track Package",
@@ -106,7 +98,7 @@ export const DropDown_Sidebar_profile = () => {
               <div className="">
                 {links.map((link) => (
                   <li key={link.text}>
-                    <button onClick={() => gotToNewPage()}>
+                    <button onClick={() => navigate(link.path)}>
                       <span className="flex items-center">
                         <link.icon /> {link.text}
                       </span>

@@ -35,13 +35,13 @@ const Features = () => {
     <>
       <div>
         <div className="">
-          <div className="mx-auto">
-            <div>
-              <div className=" group w-fit">
-                <h1 className="text-3xl text">Why Choose Us</h1>
+          <div className="mx-auto mt-10">
+            <div className="lora-400 text-center">
+              <div className=" group w-fit mx-auto">
+                <p className="text-3xl text">Why Choose Us</p>
                 <div className="bg-amber-500 h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
                 </div>
-              <p className="text-subheading mt-2 mb-4">
+              <p className="text-subheading mt-2 mb-8">
                 Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet
                 velit. Aliquam vulputate velit imperdiet dolor tempor tristique.
               </p>

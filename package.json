@@ -15,14 +15,17 @@
     "@loadable/component": "^5.16.4",
     "@mui/icons-material": "^5.15.18",
     "@mui/material": "^5.15.18",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "firebase": "^10.12.1",
+    "flowbite-react": "^0.9.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-loader-spinner": "^6.1.6",
     "react-router-dom": "^6.23.1",
     "react-slick": "^0.30.2",
     "react-toastify": "^10.0.5",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

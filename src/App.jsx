@@ -36,12 +36,14 @@ import { Layout } from "./Layout";
 // import { Signup } from "./Pages/signup";
 import { AddProduct } from "./Components/AddProduct/AddProduct";
 import { Dashboard } from "./Components/Dashboard/Dashboard";
-
 import { Search } from "./Components/Search.jsx/Search";
 import MyState from "./context/myState";
 import { LoaderPage } from "./Components/Loader/Loader";
+import { EditProfile } from "./Pages/EditProfile";
+import Order from "./Components/order/Order";
 // import Product_Details from "./Components/Products/Product_Details";
 function App() {
+  const [orderItems , setOrderItems] = useState( JSON.parse(localStorage.getItem("order")) || [])
   const [cartItem, setCartItmes] = useState(
     JSON.parse(localStorage.getItem("cart")) || []
   );
@@ -49,12 +51,18 @@ function App() {
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cartItem));
   }, [cartItem]);
+  useEffect(() => {
+    localStorage.setItem("order", JSON.stringify(orderItems));
+  }, [orderItems]);
 
   const handleAddToCart = (selected_item, counterCart) => {
     const itemsToAdd = Array(counterCart).fill(selected_item);
     // const isItemInCart = cartItem.some((item) => item.id === selected_item.id);
     setCartItmes([...cartItem, ...itemsToAdd]);
     // localStorage.setItem("cart", cartItem);
+  };
+  const handleOrder = (neworder) => {
+    setOrderItems([...orderItems, ...neworder]);
   };
   const [inputQuery, setInputQuery] = useState("");
 
@@ -99,7 +107,7 @@ function App() {
                 />
               }
             >
-              <Route index element={<Home />} />
+              <Route index element={<Home filterByCategory={filterByCategory}/>} />
               {/* <Route path="/about" element={<Features />} />  */}
               <Route
                 path="/store"
@@ -115,7 +123,7 @@ function App() {
                   />
                 }
               />
-              <Route path="/profile" element={<Profile />} />
+              
               <Route path="/search/:term" element={<Search />} />
               <Route
                 path="/cart"
@@ -126,13 +134,31 @@ function App() {
               <Route
                 path="/checkout"
                 element={
+                  <ProtectedRoute>
+                    <Checkout cartItem={cartItem} setCartItmes={setCartItmes}  handleOrder={handleOrder}/>
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/profile"
+                element={
+                  <ProtectedRoute>
+                    <Profile/>
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/order"
+                element={
                   <ProtectedRouteForAdmin>
-                    <Checkout />
+                    <Order orderItems={orderItems}/>
                   </ProtectedRouteForAdmin>
                 }
               />
+              
               <Route path="/signup" element={<Signup />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/editProfile" element={<EditProfile />} />
               <Route
                 path="/dashboard"
                 element={

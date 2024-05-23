@@ -29,10 +29,10 @@ const Testinomails = () => {
     return (
         <>
       <div>
-        <div className="border">
-          <div className="mx-auto p-16">
+        <div className="">
+          <div className="mx-auto lg:p-16 p-4">
             <div className=' text-center'>
-            <h1 className="text-4xl text mb-12 font-normal">Here's what people are saying</h1>
+            <h1 className="lg:text-4xl text-2xl text lg:mb-12 mb-6 font-normal lora-500 text-subheading">Here's what people are saying</h1>
             </div>
             <ul className=" grid lg:grid-cols-3 md:grid-cols-2 gap-3">
               {testinomials.map(({ avatar, alt ,desc ,name , role }) => (

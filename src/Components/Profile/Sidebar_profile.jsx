@@ -6,23 +6,20 @@ import TravelExploreOutlinedIcon from '@mui/icons-material/TravelExploreOutlined
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined';
 import profile_photo from "../../assets/images/avatar_icon.png";
+import {useNavigate} from "react-router-dom"
 export const Sidebar_profile = () => {
+  const navigate = useNavigate()
   const links = [
     {
         text: "Your Porfile",
         icon :AccountCircleOutlinedIcon,
-        path: "#",
+        path: "/profile",
       },
     {
       text: "Orders",
       icon :Inventory2OutlinedIcon,
-      path: "#",
+      path: "/order",
     },
-    {
-        text: "Change Delivery Address",
-        icon : AddLocationAltOutlinedIcon,
-        path: "#",
-      },
     {
       text: "Track Package",
       icon:TravelExploreOutlinedIcon,
@@ -40,8 +37,10 @@ export const Sidebar_profile = () => {
       
      
           <ul className="menu min-h-full text-base-content">
-            <div className="">
-              {links.map((link)=><li className="mb-4"><button className="hover:bg-links focus:bg-links focus:text-white hover:text-white bg-white border-none"><span className="flex items-center"><link.icon /> {link.text}</span></button></li>)}
+            <div className=" mt-10">
+              {links.map((link)=><li className="mb-4"><button
+                onClick={()=>navigate(link.path)}
+               className="flex justify-center items-center hover:bg-links focus:bg-links focus:text-white hover:text-white bg-white border-none "><span className=""><link.icon />{link.text}</span></button></li>)}
 
             </div>
           </ul>

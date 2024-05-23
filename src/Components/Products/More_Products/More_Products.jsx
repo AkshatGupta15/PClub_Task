@@ -37,12 +37,9 @@ function PreviousBtn(props) {
   );
 }
 
-function More_Products({products, text, link}) {
+function More_Products({products, text}) {
   // console.log(products)
   const navigate = useNavigate()
-  const gotToNewPage=()=>{
-    navigate(`/store/${products}`);
-  }
   const [width, setWidth] = useState(window.innerWidth);
   const updateWidth = () => {
     setWidth(window.innerWidth);
@@ -97,17 +94,17 @@ function More_Products({products, text, link}) {
   };
   
   return (
-    <div className="p-5">
+    <div className="p-5" >
       <div className=" flex justify-between">
-        <div className="">
-          <p className=" text-2xl  poetsen-one-regular font-normal mb-5">{text}</p>
+        <div className="mb-6">
+          <p className=" lg:text-2xl text-lg  poetsen-one-regular font-normal mb-5 text-[#51A8A6]">{text}</p>
         </div>
         <div className="domine-500  text-blue-800   "> 
-        <button onClick={() => gotToNewPage()}><p className="underline underline-offset-2">Go to Shop</p></button>
+        <button onClick={() => navigate("/store")}><p className="underline underline-offset-2 text-sm">Go to Shop</p></button>
           
         </div>
       </div>
-      <Slider {...carouselProperties} className="flex ">
+      <Slider {...carouselProperties} className="">
       {products.map((product)=> <Product_Card more_info={product} key={product.title}/>)}
         
 
