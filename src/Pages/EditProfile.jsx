@@ -45,6 +45,15 @@ export const EditProfile = () => {
         college,
       postalCode})
       localStorage.setItem("userData", JSON.stringify(userData))
+      localStorage.setItem("userData", JSON.stringify({firstName,
+        lastName,
+        phoneNumber,
+        roomNo,
+        hall,
+        city,
+        state,
+        college,
+      postalCode}))
       if(!areValuesNotNull){
         return toast.error(error.message)
       }
