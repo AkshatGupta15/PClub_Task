@@ -2,6 +2,7 @@ import { Button, ButtonGroup } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
+import {useNavigate} from "react-router-dom"
 import {
   GroupedCart,
   CountButton,
@@ -11,6 +12,7 @@ import {
 import { Empty_cart } from "./Empty_cart";
 const Cart = ({ cartItem, setCartItmes }) => {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("userData")) || {});
+  const navigate= useNavigate()
   return (
     <>
       <div className=" mt-20 lg:flex justify-between">
@@ -83,6 +85,7 @@ const Cart = ({ cartItem, setCartItmes }) => {
                   <button
                     className="btn w-full btn-success text-white text-xl"
                     disabled={TotalPrice(cartItem) == 0}
+                    onClick={()=>navigate("/checkout")}
                   >
                     Checkout
                   </button>
