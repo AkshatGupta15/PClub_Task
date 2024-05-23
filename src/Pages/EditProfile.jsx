@@ -44,11 +44,12 @@ export const EditProfile = () => {
         state,
         college,
       postalCode})
+      localStorage.setItem("userData", JSON.stringify(userData))
       if(!areValuesNotNull){
         return toast.error(error.message)
       }
       console.log(userData)
-      localStorage.setItem("userData", JSON.stringify(userData))
+      
       toast.success("Data Added Succesfully")
       navigate("/login")
 
