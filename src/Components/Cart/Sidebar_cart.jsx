@@ -58,7 +58,7 @@ export const Cart_Sidebar = ({ cartItem, setCartItmes }) => {
               className="drawer-overlay"
             ></label>
 
-            <ul className="menu min-h-full w-1/3 bg-white block p-0 ">
+            <ul className="menu min-h-full md:w-1/3 w-[90%] bg-white block p-0 ">
               <div className=" text-base-content">
                 <div className="flex flex-col justify-between ">
                   <div className="">

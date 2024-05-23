@@ -150,9 +150,9 @@ function App() {
               <Route
                 path="/order"
                 element={
-                  <ProtectedRouteForAdmin>
+                  <ProtectedRoute>
                     <Order orderItems={orderItems}/>
-                  </ProtectedRouteForAdmin>
+                  </ProtectedRoute>
                 }
               />
               

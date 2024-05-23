@@ -5157,6 +5157,10 @@ html:has(.drawer-toggle:checked) {
     width: 25%;
   }
 
+  .lg\:w-1\/3 {
+    width: 33.333333%;
+  }
+
   .lg\:max-w-64 {
     max-width: 16rem;
   }

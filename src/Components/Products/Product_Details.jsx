@@ -38,6 +38,9 @@ const Product_Details = ({ handleAddToCart, AllProducts, filterByCategory }) => 
   useEffect(() => {
     const product = AllProducts.find((product) => product.id == id);
     setSelectedProduct(product || {});
+    window.scrollTo(0, 0);
+    setIsAdded(false)
+    setCounterCart(1)
   }, [id]);
 
   const [isAdded, setIsAdded] = useState(false);
