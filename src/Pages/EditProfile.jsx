@@ -50,7 +50,7 @@ export const EditProfile = () => {
       console.log(userData)
       localStorage.setItem("userData", JSON.stringify(userData))
       toast.success("Data Added Succesfully")
-      // navigate("/login")
+      navigate("/login")
 
       
       // addUserDetailsToDB()
